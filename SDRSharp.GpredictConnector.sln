@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDRSharp.GpredictConnector", "SDRSharp.GpredictConnector\SDRSharp.GpredictConnector.csproj", "{2995B0D9-C442-4858-9562-33A9E6EE8ACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGpredictConnector", "UnitTestGpredictConnector\UnitTestGpredictConnector.csproj", "{1A9DBB8C-C2E8-4D05-AD1D-717A21AE2511}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2995B0D9-C442-4858-9562-33A9E6EE8ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2995B0D9-C442-4858-9562-33A9E6EE8ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2995B0D9-C442-4858-9562-33A9E6EE8ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2995B0D9-C442-4858-9562-33A9E6EE8ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A9DBB8C-C2E8-4D05-AD1D-717A21AE2511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A9DBB8C-C2E8-4D05-AD1D-717A21AE2511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A9DBB8C-C2E8-4D05-AD1D-717A21AE2511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A9DBB8C-C2E8-4D05-AD1D-717A21AE2511}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0756CF4E-8F46-49AD-B164-81AFB3A21464}
+	EndGlobalSection
+EndGlobal
