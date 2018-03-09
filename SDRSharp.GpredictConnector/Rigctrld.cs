@@ -48,11 +48,11 @@ namespace SDRSharp.GpredictConnector
             return answer;
         }
 
-        public string SetFrequency(string command)
+        private string SetFrequency(string command)
         {
             var f_string = command.Substring(3, 9);
             Thread t = new Thread(() => FrequencyInHzString = f_string);
-             t.Start();          
+            t.Start();          
             return GenAnswer(Errcode.RIG_OK); 
         }
 

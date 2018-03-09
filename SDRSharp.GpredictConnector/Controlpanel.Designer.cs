@@ -90,8 +90,9 @@
             this.Controls.Add(this.labelFrequency);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.checkBoxEnable);
+            this.MinimumSize = new System.Drawing.Size(185, 55);
             this.Name = "Controlpanel";
-            this.Size = new System.Drawing.Size(185, 156);
+            this.Size = new System.Drawing.Size(185, 55);
             this.ResumeLayout(false);
             this.PerformLayout();
 

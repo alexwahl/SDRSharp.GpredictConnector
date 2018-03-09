@@ -65,6 +65,7 @@
     <Compile Include="Test_FrequencyManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test_HamlibTCP.cs" />
+    <Compile Include="Test_rigctrld.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

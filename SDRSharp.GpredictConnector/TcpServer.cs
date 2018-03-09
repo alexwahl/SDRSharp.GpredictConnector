@@ -99,7 +99,7 @@ namespace SDRSharp.GpredictConnector
 
         public event Action<bool> Connected;
         public event Action<bool> Enabled;
-        public event Action<string> Received;
+        
         
         private TcpListener tcpListener;
         private Task task_connectionHandler;
