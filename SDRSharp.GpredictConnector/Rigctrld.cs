@@ -51,8 +51,8 @@ namespace SDRSharp.GpredictConnector
         private string SetFrequency(string command)
         {
             var f_string = command.Substring(3, 9);
-            Thread t = new Thread(() => FrequencyInHzString = f_string);
-            t.Start();          
+            frequency_set_thread_ = new Thread(() => FrequencyInHzString = f_string);
+            frequency_set_thread_.Start();          
             return GenAnswer(Errcode.RIG_OK); 
         }
 
@@ -91,5 +91,13 @@ namespace SDRSharp.GpredictConnector
         public event Action<long> FrequencyInHzChanged;
 
         private long frequency_ = 0;
+        private Thread frequency_set_thread_ = null;
+        public Thread FrequencySetThread
+        {
+            get
+            {
+                return frequency_set_thread_;
+            }
+        }
     }
 }

@@ -11,16 +11,9 @@ namespace UnitTestGpredictConnector
     /// Zusammenfassungsbeschreibung für Test_rigctrld
     /// </summary>
     [TestClass]
-    public class Test_rigctrld
+    public class Test_rigctrld_set_frequency
     {
-        public Test_rigctrld()
-        {
-            //
-            // TODO: Konstruktorlogik hier hinzufügen
-            //
-        }
-
-        private TestContext testContextInstance;
+         private TestContext testContextInstance;
 
         /// <summary>
         ///Ruft den Textkontext mit Informationen über
@@ -59,41 +52,31 @@ namespace UnitTestGpredictConnector
         // public void MyTestCleanup() { }
         //
         #endregion
-
-        [TestMethod]
-        public void SetFrequency()
+        [TestInitialize()]
+        public void Initialize()
         {
-            Rigctrld cut = new Rigctrld();
-            long expect_freq = 144800123;
-            string test_command = "F  144800123";
-            cut.ExecCommand(test_command);
-            int count = 0;
-            while (cut.FrequencyInHz == 0)
-            {
-                Thread.Sleep(1);
-                count++;
-                Assert.AreNotEqual(1000, count,"timeout...");
-            }
-            Assert.AreEqual(expect_freq, cut.FrequencyInHz);
+            class_under_test_ = new Rigctrld();
         }
 
+
         [TestMethod]
-        public void SetFrequencyCallback()
+        public void SetFrequency_F__144800123()
         {
             Rigctrld cut = new Rigctrld();
-            long expect_freq = 144800123;
+            TestHelper_SetFrequency(expected_freq: 144800123, command: "F  144800123");
+        }
+
+        private void TestHelper_SetFrequency(long expected_freq, string command)
+        {
             long result_freq = 0;
-            string test_command = "F  144800123";
-            cut.FrequencyInHzChanged += x => result_freq = x;
-            cut.ExecCommand(test_command);
-            int count = 0;
-            while (result_freq == 0)
-            {
-                Thread.Sleep(1);
-                count++;
-                Assert.AreNotEqual(1000, count, "timeout...");
-            }
-            Assert.AreEqual(expect_freq, result_freq);
+            class_under_test_.FrequencyInHzChanged += x => result_freq = x;
+            class_under_test_.ExecCommand(command);
+            Assert.IsNotNull(class_under_test_.FrequencySetThread); // should be running
+            class_under_test_.FrequencySetThread.Join(); // wait for the freqeuncy set thread to finish his work
+            Assert.AreEqual(expected_freq, class_under_test_.FrequencyInHz);
+            Assert.AreEqual(expected_freq, result_freq);
         }
+
+        private Rigctrld class_under_test_ = null;
     }
 }
