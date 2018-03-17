@@ -1,9 +1,5 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SDRSharp.GpredictConnector;
-using System.Threading;
 
 namespace UnitTestGpredictConnector
 {
@@ -62,15 +58,56 @@ namespace UnitTestGpredictConnector
         [TestMethod]
         public void SetFrequency_F__144800123()
         {
-            Rigctrld cut = new Rigctrld();
             TestHelper_SetFrequency(expected_freq: 144800123, command: "F  144800123");
+        }
+        [TestMethod]
+        public void SetFrequency_F__1GHZ()
+        {
+            TestHelper_SetFrequency(expected_freq: 1234567890, command: "F  1234567890");
+        }
+        [TestMethod]
+        public void SetFrequency_F__10m()
+        {
+            TestHelper_SetFrequency(expected_freq: 29420877, command: "F  29420877");
+        }
+
+        [TestMethod]
+        public void SetFrequency_F_144800123()
+        {
+            TestHelper_SetFrequency(expected_freq: 144800123, command: "F 144800123");
+        }
+
+        [TestMethod]
+        public void SetFrequency_F_00144800123()
+        {
+            TestHelper_SetFrequency(expected_freq: 144800123, command: "F 00144800123");
+        }
+
+        [TestMethod]
+        public void SetFrequency_F_1GHZ()
+        {
+            TestHelper_SetFrequency(expected_freq: 1234567890, command: "F 1234567890");
+        }
+        [TestMethod]
+        public void SetFrequency_F_10m()
+        {
+            TestHelper_SetFrequency(expected_freq: 29420877, command: "F 29420877");
+        }
+
+        [TestMethod]
+        public void SetFrequency_unparseableFreq()
+        {
+            Assert.AreEqual("RPRT 0\n", class_under_test_.ExecCommand("F 1234d567890"));
+            Assert.IsNull(class_under_test_.FrequencySetThread);
+            Assert.AreEqual(0, class_under_test_.FrequencyInHz);
         }
 
         private void TestHelper_SetFrequency(long expected_freq, string command)
         {
             long result_freq = 0;
+
             class_under_test_.FrequencyInHzChanged += x => result_freq = x;
-            class_under_test_.ExecCommand(command);
+            Assert.AreEqual("RPRT 0\n", class_under_test_.ExecCommand(command));
             Assert.IsNotNull(class_under_test_.FrequencySetThread); // should be running
             class_under_test_.FrequencySetThread.Join(); // wait for the freqeuncy set thread to finish his work
             Assert.AreEqual(expected_freq, class_under_test_.FrequencyInHz);
