@@ -20,9 +20,15 @@ namespace SDRSharp.GpredictConnector
                         frequency_set_thread_ = new Thread(() => FrequencyInHzString = f_string);
                         frequency_set_thread_.Start();
                     }
+                    return "RPRT 0\\n";
                 }
+                return "RPRT -8\\n"; //wrong or unknown F command
             }
-            return "RPRT 0\n";
+            else if (command.StartsWith("f"))
+            {
+                return FrequencyInHzString + "\\n"; //return current freq.
+            }
+            return "RPRT -4\\n"; //recieved unsupported command
         }
 
         public long FrequencyInHz
