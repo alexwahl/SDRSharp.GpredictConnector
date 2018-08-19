@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SDRSharp.GpredictConnector")]
-[assembly: AssemblyCopyright("Copyright © Alexander Wahl 2018")]
+[assembly: AssemblyCopyright("Copyright © Alexander Wahl DH2AW 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,5 +33,5 @@ using System.Runtime.InteropServices;
 // Sie können alle Werte angeben oder Standardwerte für die Build- und Revisionsnummern verwenden,
 // indem Sie "*" wie unten gezeigt eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.2.*")]
-[assembly: AssemblyFileVersion(version: "0.2.0")]
+[assembly: AssemblyVersion("0.3.*")]
+[assembly: AssemblyFileVersion(version: "0.3.0")]
