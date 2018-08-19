@@ -97,7 +97,7 @@ namespace UnitTestGpredictConnector
         [TestMethod]
         public void SetFrequency_unparseableFreq()
         {
-            Assert.AreEqual("RPRT 0\n", class_under_test_.ExecCommand("F 1234d567890"));
+            Assert.AreEqual("RPRT -8\n", class_under_test_.ExecCommand("F 1234d567890"));
             Assert.IsNull(class_under_test_.FrequencySetThread);
             Assert.AreEqual(0, class_under_test_.FrequencyInHz);
         }
