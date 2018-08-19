@@ -33,6 +33,7 @@
             this.labelFrequency = new System.Windows.Forms.Label();
             this.labelDescserverStat = new System.Windows.Forms.Label();
             this.labelDescLastFrq = new System.Windows.Forms.Label();
+            this.labelVersion = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // checkBoxEnable
@@ -81,10 +82,21 @@
             this.labelDescLastFrq.TabIndex = 7;
             this.labelDescLastFrq.Text = "Last Freq set :";
             // 
+            // labelVersion
+            // 
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.Location = new System.Drawing.Point(83, 3);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(28, 13);
+            this.labelVersion.TabIndex = 8;
+            this.labelVersion.TabStop = true;
+            this.labelVersion.Text = "v0.0";
+            // 
             // Controlpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelDescLastFrq);
             this.Controls.Add(this.labelDescserverStat);
             this.Controls.Add(this.labelFrequency);
@@ -104,5 +116,6 @@
         private System.Windows.Forms.Label labelDescLastFrq;
         public System.Windows.Forms.CheckBox checkBoxEnable;
         public System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.LinkLabel labelVersion;
     }
 }

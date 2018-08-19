@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace SDRSharp.GpredictConnector
 {
@@ -19,7 +20,10 @@ namespace SDRSharp.GpredictConnector
             InitializeComponent();
             this.checkBoxEnable.CheckedChanged += CheckBoxEnable_CheckedChanged;
             TcpServer_Connected_Changed(false); // init state is disconnected.
-            
+
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            this.labelVersion.Text = "v"+fvi.FileMajorPart+"."+fvi.FileMinorPart;
         }
 
         public  void ReceivedFrequencyInHzChanged(long frequency_in_hz)
