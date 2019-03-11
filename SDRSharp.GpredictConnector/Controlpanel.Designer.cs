@@ -34,6 +34,10 @@
             this.labelDescserverStat = new System.Windows.Forms.Label();
             this.labelDescLastFrq = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.LinkLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonForceGpredict = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBoxEnable
@@ -92,10 +96,44 @@
             this.labelVersion.TabStop = true;
             this.labelVersion.Text = "v0.0";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButtonForceGpredict);
+            this.groupBox1.Location = new System.Drawing.Point(0, 53);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(162, 75);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "frequency link";
+            // 
+            // radioButtonForceGpredict
+            // 
+            this.radioButtonForceGpredict.AutoSize = true;
+            this.radioButtonForceGpredict.Location = new System.Drawing.Point(7, 20);
+            this.radioButtonForceGpredict.Name = "radioButtonForceGpredict";
+            this.radioButtonForceGpredict.Size = new System.Drawing.Size(123, 17);
+            this.radioButtonForceGpredict.TabIndex = 0;
+            this.radioButtonForceGpredict.TabStop = true;
+            this.radioButtonForceGpredict.Text = "force to gpredict freq";
+            this.radioButtonForceGpredict.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 43);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(131, 17);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "sync freq with gpredict";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Controlpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelDescLastFrq);
             this.Controls.Add(this.labelDescserverStat);
@@ -104,7 +142,9 @@
             this.Controls.Add(this.checkBoxEnable);
             this.MinimumSize = new System.Drawing.Size(185, 55);
             this.Name = "Controlpanel";
-            this.Size = new System.Drawing.Size(185, 55);
+            this.Size = new System.Drawing.Size(185, 167);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +157,8 @@
         public System.Windows.Forms.CheckBox checkBoxEnable;
         public System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.LinkLabel labelVersion;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonForceGpredict;
     }
 }
