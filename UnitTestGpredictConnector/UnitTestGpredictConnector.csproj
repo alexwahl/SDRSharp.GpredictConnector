@@ -46,15 +46,15 @@
     </Reference>
     <Reference Include="SDRSharp.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Documents\workspace\sdrsharp\sdrsharp\SDRSharp.Common.dll</HintPath>
+      <HintPath>..\..\..\..\sdrsharp\sdrsharp-x86-v1.0.0.1700\SDRSharp.Common.dll</HintPath>
     </Reference>
     <Reference Include="SDRSharp.PanView, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Documents\workspace\sdrsharp\sdrsharp\SDRSharp.PanView.dll</HintPath>
+      <HintPath>..\..\..\..\sdrsharp\sdrsharp-x86-v1.0.0.1700\SDRSharp.PanView.dll</HintPath>
     </Reference>
     <Reference Include="SDRSharp.Radio, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Documents\workspace\sdrsharp\sdrsharp\SDRSharp.Radio.dll</HintPath>
+      <HintPath>..\..\..\..\sdrsharp\sdrsharp-x86-v1.0.0.1700\SDRSharp.Radio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -76,6 +76,9 @@
       <Project>{2995b0d9-c442-4858-9562-33a9e6ee8acc}</Project>
       <Name>SDRSharp.GpredictConnector</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
