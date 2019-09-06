@@ -34,10 +34,11 @@
             this.labelDescserverStat = new System.Windows.Forms.Label();
             this.labelDescLastFrq = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.LinkLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonForceGpredict = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
+            this.checkBoxForceFreq = new System.Windows.Forms.CheckBox();
+            this.groupBoxFreqOffset = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBoxFreqOffset.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBoxEnable
@@ -96,44 +97,49 @@
             this.labelVersion.TabStop = true;
             this.labelVersion.Text = "v0.0";
             // 
-            // groupBox1
+            // checkBoxForceFreq
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButtonForceGpredict);
-            this.groupBox1.Location = new System.Drawing.Point(0, 53);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(162, 75);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "frequency link";
+            this.checkBoxForceFreq.AutoSize = true;
+            this.checkBoxForceFreq.Location = new System.Drawing.Point(6, 53);
+            this.checkBoxForceFreq.Name = "checkBoxForceFreq";
+            this.checkBoxForceFreq.Size = new System.Drawing.Size(124, 17);
+            this.checkBoxForceFreq.TabIndex = 9;
+            this.checkBoxForceFreq.Text = "force to gpredict freq";
+            this.checkBoxForceFreq.UseVisualStyleBackColor = true;
             // 
-            // radioButtonForceGpredict
+            // groupBoxFreqOffset
             // 
-            this.radioButtonForceGpredict.AutoSize = true;
-            this.radioButtonForceGpredict.Location = new System.Drawing.Point(7, 20);
-            this.radioButtonForceGpredict.Name = "radioButtonForceGpredict";
-            this.radioButtonForceGpredict.Size = new System.Drawing.Size(123, 17);
-            this.radioButtonForceGpredict.TabIndex = 0;
-            this.radioButtonForceGpredict.TabStop = true;
-            this.radioButtonForceGpredict.Text = "force to gpredict freq";
-            this.radioButtonForceGpredict.UseVisualStyleBackColor = true;
+            this.groupBoxFreqOffset.Controls.Add(this.label1);
+            this.groupBoxFreqOffset.Controls.Add(this.maskedTextBox1);
+            this.groupBoxFreqOffset.Location = new System.Drawing.Point(4, 77);
+            this.groupBoxFreqOffset.Name = "groupBoxFreqOffset";
+            this.groupBoxFreqOffset.Size = new System.Drawing.Size(154, 56);
+            this.groupBoxFreqOffset.TabIndex = 10;
+            this.groupBoxFreqOffset.TabStop = false;
+            this.groupBoxFreqOffset.Text = "frequency offset";
             // 
-            // radioButton1
+            // maskedTextBox1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 43);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(131, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "sync freq with gpredict";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.maskedTextBox1.Location = new System.Drawing.Point(6, 20);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(113, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "kHz";
             // 
             // Controlpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxFreqOffset);
+            this.Controls.Add(this.checkBoxForceFreq);
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelDescLastFrq);
             this.Controls.Add(this.labelDescserverStat);
@@ -143,8 +149,8 @@
             this.MinimumSize = new System.Drawing.Size(185, 55);
             this.Name = "Controlpanel";
             this.Size = new System.Drawing.Size(185, 167);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxFreqOffset.ResumeLayout(false);
+            this.groupBoxFreqOffset.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,8 +163,9 @@
         public System.Windows.Forms.CheckBox checkBoxEnable;
         public System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.LinkLabel labelVersion;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButtonForceGpredict;
+        private System.Windows.Forms.CheckBox checkBoxForceFreq;
+        private System.Windows.Forms.GroupBox groupBoxFreqOffset;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
