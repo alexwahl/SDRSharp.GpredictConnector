@@ -46,15 +46,15 @@
     </Reference>
     <Reference Include="SDRSharp.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Documents\workspace\sdrsharp\sdrsharp\SDRSharp.Common.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\SDRSharp\SDRSharp.Common.dll</HintPath>
     </Reference>
     <Reference Include="SDRSharp.PanView, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Documents\workspace\sdrsharp\sdrsharp\SDRSharp.PanView.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\SDRSharp\SDRSharp.PanView.dll</HintPath>
     </Reference>
     <Reference Include="SDRSharp.Radio, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Documents\workspace\sdrsharp\sdrsharp\SDRSharp.Radio.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\SDRSharp\SDRSharp.Radio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

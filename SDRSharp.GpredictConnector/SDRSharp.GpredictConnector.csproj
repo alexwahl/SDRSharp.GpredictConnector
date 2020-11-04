@@ -35,15 +35,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SDRSharp.Common">
-      <HintPath>..\..\..\..\..\..\PortableProgramme\sdrsharp-x86\SDRSharp.Common.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\SDRSharp\SDRSharp.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SDRSharp.PanView">
-      <HintPath>..\..\..\..\..\..\PortableProgramme\sdrsharp-x86\SDRSharp.PanView.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\SDRSharp\SDRSharp.PanView.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SDRSharp.Radio">
-      <HintPath>..\..\..\..\..\..\PortableProgramme\sdrsharp-x86\SDRSharp.Radio.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\SDRSharp\SDRSharp.Radio.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -78,6 +78,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetDir)$(TargetFileName) C:\PortableProgramme\sdrsharp-x86</PostBuildEvent>
+    <PostBuildEvent>copy $(TargetDir)$(TargetFileName) C:\SDRSharp</PostBuildEvent>
   </PropertyGroup>
 </Project>

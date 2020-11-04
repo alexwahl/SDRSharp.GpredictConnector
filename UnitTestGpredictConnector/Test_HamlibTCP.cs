@@ -7,6 +7,8 @@ using SDRSharp.Common;
 using SDRSharp.PanView;
 using SDRSharp.Radio;
 using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace UnitTestHamlibTCP
 {
@@ -105,6 +107,22 @@ namespace UnitTestHamlibTCP
 
             public double AudioSampleRate => throw new NotImplementedException();
 
+            public Color FilterColor { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+            public int MaximumFilterBandwidth => throw new NotImplementedException();
+
+            public bool FmPilotIsDetected => throw new NotImplementedException();
+
+            public bool ThemeIsDark => throw new NotImplementedException();
+
+            public ushort RdsPICode => throw new NotImplementedException();
+
+            public double InputSampleRate => throw new NotImplementedException();
+
+            public bool SourceIsComplex => throw new NotImplementedException();
+
+            public float AudioPanning { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
             public event PropertyChangedEventHandler PropertyChanged;
             public event CustomPaintEventHandler WaterfallCustomPaint;
             public event CustomPaintEventHandler SpectrumAnalyzerCustomPaint;
@@ -116,6 +134,11 @@ namespace UnitTestHamlibTCP
             }
 
             public void GetSpectrumSnapshot(float[] destArray, float scale = 1, float offset = 0)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void InvalidateSpectrumGraphics()
             {
                 throw new NotImplementedException();
             }
@@ -135,6 +158,11 @@ namespace UnitTestHamlibTCP
                 throw new NotImplementedException();
             }
 
+            public void RegisterFrontControl(Control control, PluginPosition preferredPosition)
+            {
+                throw new NotImplementedException();
+            }
+
             public void RegisterStreamHook(object streamHook, ProcessorType processorType)
             {
                 throw new NotImplementedException();
@@ -146,6 +174,11 @@ namespace UnitTestHamlibTCP
             }
 
             public void ResetFrequency(long frequency, long centerFrequency)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void ResetRDS()
             {
                 throw new NotImplementedException();
             }
